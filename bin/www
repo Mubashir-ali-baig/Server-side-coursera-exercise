@@ -6,13 +6,24 @@
 
 var app = require('../app');
 var debug = require('debug')('confusionserver:server');
+var mongoose = require('mongoose')
 var http = require('http');
 
+/*const uri = "mongodb+srv://admin:admin@node.2trvo.mongodb.net/user?retryWrites=true&w=majority";
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log("MongoDB Connected…")
+})
+.catch(err => console.log(err))
+*/
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
 
 /**
